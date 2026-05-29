@@ -1,0 +1,26 @@
+========================================================================
+  Dynamic #6-#10 (>=20% hysteresis) -- 2015-01-02 -> 2025-12-31
+========================================================================
+  Candidate universe (15): AAPL, MSFT, GOOGL, AMZN, NVDA, META, TSLA, BRK-B, XOM, JPM, V, JNJ, WMT, UNH, PG
+  Swap rule: replace out-of-band holding with band member if |bigger/smaller| > 1.2x
+========================================================================
+Metric                                  Strategy                 SPY
+------------------------------------------------------------------------
+Total Return                             578.56%             302.61%
+CAGR                                      19.07%              13.53%
+Sharpe (rf=4.5%)                           0.702               0.550
+Sortino                                    0.913               0.673
+Max Drawdown                             -44.33%             -33.71%
+------------------------------------------------------------------------
+Total swaps                  : 74
+Trade-log rows               : 153
+Final holdings               : BRK-B, JPM, META, TSLA, WMT
+Final cash residual          : $4,451.55
+
+Per-holding end values:
+  TSLA    shares=    303  final_px=$  454.43  end_value=$    137,692.29
+  META    shares=    418  final_px=$  665.38  end_value=$    278,128.97
+  BRK-B   shares=    283  final_px=$  503.71  end_value=$    142,549.93
+  JPM     shares=    170  final_px=$  320.33  end_value=$     54,455.82
+  WMT     shares=    528  final_px=$  111.48  end_value=$     58,860.40
+========================================================================

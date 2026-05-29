@@ -1,0 +1,28 @@
+==============================================================================================================
+  STRATEGY VARIANT COMPARISON — 2015-01-02 -> 2025-12-31, one continuous portfolio per variant
+==============================================================================================================
+
+Variant                                                  Strat Ret    SPY Ret  Strat CAGR  Strat Shrp  Strat MDD
+--------------------------------------------------------------------------------------------------------------
+v1  small %  (0.01 / 0.005, min-share floor)                49.07%    302.61%       3.71%      -0.154     -8.07%
+v2  reinvest (0.1  / 0.05,  min-share floor, SPY reinvest)    362.72%    302.61%      14.98%       0.612    -33.69%
+v3  no floor (0.1  / 0.05,  NO min-share floor)            424.64%    302.61%      16.31%       0.679    -33.65%
+
+Variant                                                    Trades  PT fills  SL fills   Closed  Post-2020
+--------------------------------------------------------------------------------------------------------------
+v1  small %  (0.01 / 0.005, min-share floor)                3,807     1,455     1,896      461        142
+v2  reinvest (0.1  / 0.05,  min-share floor, SPY reinvest)     3,807     1,455     1,896      461        142
+v3  no floor (0.1  / 0.05,  NO min-share floor)               456         0         0        6          0
+
+==============================================================================================================
+
+Reading guide:
+  v1 — gentlest. Confirms the % sizing fixes the post-2020 inactivity even at very small %.
+  v2 — same trim aggressiveness as backtest_3/4 but cash → SPY. Strategy benefits from the
+       trimmed names AND from market exposure on idle cash, so it should track SPY closely.
+  v3 — small positions never trim. By 2025 most positions are large enough for floor(shares*%)
+       to fill ≥1, so trims still happen — but only when economically meaningful.
+
+For prior context: backtest_2 ($10/$5 fixed) returned 326.27%, max DD -33.49%, but stopped
+trading entirely after 2020-07-07. backtest_3 (1%/0.5%) and backtest_4 (0.1%/0.05%) traded
+through 2025 but the cash drag from non-reinvested trims dropped returns to 26.92% and 49.07%.

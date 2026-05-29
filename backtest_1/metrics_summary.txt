@@ -1,0 +1,20 @@
+========================================================================
+  S&P 500 Momentum Partial-Trim Backtest — Summary
+  2015-01-01  ->  2024-12-31    Starting capital: $100,000
+========================================================================
+Metric                                  Strategy                 SPY
+------------------------------------------------------------------------
+Total Return                             273.50%             240.72%
+CAGR                                      14.11%              13.07%
+Sharpe (rf=4.5%)                           0.606               0.531
+Sortino                                    0.742               0.645
+Max Drawdown                             -33.49%             -33.71%
+------------------------------------------------------------------------
+Total trades executed       : 760
+   profit-take fills        : 169
+   stop-loss fills          : 135
+   fully closed positions   : 16
+Win rate (closed positions) :      0.00%
+Avg gain on profit-take fill:      0.03%
+Avg loss on stop-loss fill  :     -0.36%
+========================================================================

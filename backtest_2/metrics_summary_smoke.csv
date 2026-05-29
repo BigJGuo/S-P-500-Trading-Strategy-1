@@ -1,0 +1,2 @@
+period,strat_total_return,strat_cagr,strat_sharpe,strat_sortino,strat_max_dd,spy_total_return,spy_cagr,spy_sharpe,spy_sortino,spy_max_dd,total_trades,profit_take_fills,stop_loss_fills,closed_positions,win_rate,avg_gain_profit_take,avg_loss_stop_loss
+2024-01-01__2024-06-30,0.28640796385861655,0.6683446994398821,2.921374840014488,5.141084001523822,-0.07405695287805891,0.158510887008797,0.34853285841041926,2.4549214333528293,3.8427672508485013,-0.053473548589379694,10,0,0,0,,,

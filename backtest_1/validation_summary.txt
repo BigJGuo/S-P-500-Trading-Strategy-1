@@ -1,0 +1,31 @@
+==============================================================================================================
+  WALK-FORWARD VALIDATION — Strategy vs SPY across non-overlapping windows
+==============================================================================================================
+Period                  Strat Ret    SPY Ret  Strat CAGR   SPY CAGR  Strat Shrp   SPY Shrp  Strat MDD    SPY MDD
+--------------------------------------------------------------------------------------------------------------
+FULL 2015-2024            273.50%    240.72%      14.11%     13.07%       0.606      0.531    -33.49%    -33.71%
+fold1 2015 2016            17.98%     13.44%       8.62%      6.51%       0.366      0.199    -12.00%    -13.02%
+fold2 2017 2018            20.10%     15.27%       9.63%      7.39%       0.475      0.269    -17.47%    -19.35%
+fold3 2019 2020            51.37%     55.17%      22.98%     24.51%       0.834      0.819    -32.92%    -33.74%
+fold4 2021 2022            18.43%      6.79%       8.84%      3.35%       0.359      0.036    -13.45%    -24.51%
+fold5 2023 2024            45.39%     58.82%      20.71%     26.20%       1.415      1.532     -8.71%     -9.97%
+--------------------------------------------------------------------------------------------------------------
+Trade-level stats per period:
+Period                   Trades  PT fills  SL fills   Closed     Win %    Avg PT    Avg SL
+FULL 2015-2024              760       169       135       16     0.00%     0.03%    -0.36%
+fold1 2015 2016             641       100        85        9     0.00%    -0.20%    -0.25%
+fold2 2017 2018             569        58        47       10     0.00%    -0.48%    -0.92%
+fold3 2019 2020             610        93        59       24     0.00%     0.60%    -0.12%
+fold4 2021 2022             450        23        19       84     0.00%     0.21%    -0.28%
+fold5 2023 2024             473        43        32       99     0.00%     0.47%     0.31%
+==============================================================================================================
+
+Interpretation guide:
+  - Consistent Sharpe across folds (low cross-fold std) -> strategy is regime-agnostic.
+  - Strat returns tracking SPY closely in every fold    -> partial-trim is largely cosmetic; not adding alpha.
+  - One fold dominating the full-period number          -> result is fragile / regime-dependent.
+  - Win rate << 50% but positive return                 -> a few large winners carrying the strategy.
+
+Note: this strategy has NO learned parameters — thresholds are spec-fixed.
+Classical overfitting is impossible. Walk-forward here tests regime stability,
+not parameter generalization.

@@ -1,0 +1,11 @@
+date,holdings
+2015-01-02,"['AAPL', 'BRK-B', 'GOOGL', 'MSFT', 'XOM']"
+2017-02-22,"['AAPL', 'AMZN', 'BRK-B', 'GOOGL', 'MSFT']"
+2018-07-18,"['AAPL', 'AMZN', 'GOOGL', 'META', 'MSFT']"
+2018-09-13,"['AAPL', 'AMZN', 'BRK-B', 'GOOGL', 'MSFT']"
+2020-05-01,"['AAPL', 'AMZN', 'GOOGL', 'META', 'MSFT']"
+2021-01-15,"['AAPL', 'AMZN', 'GOOGL', 'MSFT', 'TSLA']"
+2021-03-08,"['AAPL', 'AMZN', 'GOOGL', 'META', 'MSFT']"
+2021-10-28,"['AAPL', 'AMZN', 'GOOGL', 'MSFT', 'TSLA']"
+2022-11-21,"['AAPL', 'AMZN', 'BRK-B', 'GOOGL', 'MSFT']"
+2023-05-26,"['AAPL', 'AMZN', 'GOOGL', 'MSFT', 'NVDA']"

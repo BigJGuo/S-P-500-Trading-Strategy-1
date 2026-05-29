@@ -1,0 +1,38 @@
+==============================================================================================================
+  CONTINUOUS BACKTEST 2015->2025 — Per-Period Slice Report
+==============================================================================================================
+
+All numbers below are from ONE continuous portfolio. The strategy was bought once
+on 2015-01-02 and has never re-entered. Per-period rows describe the actual returns
+the live portfolio earned during those dates — not independent backtests.
+
+--------------------------------------------------------------------------------------------------------------
+Period            Days  Strat Ret    SPY Ret  Strat CAGR   SPY CAGR  Strat Shrp   SPY Shrp  Strat MDD    SPY MDD
+--------------------------------------------------------------------------------------------------------------
+FULL 2015-2025    4015    326.27%    302.61%      14.13%     13.53%       0.602      0.550    -33.49%    -33.71%
+2015-2016          728     17.98%     13.44%       8.62%      6.51%       0.366      0.199    -12.00%    -13.02%
+2017-2018          727     19.95%     15.26%       9.56%      7.39%       0.464      0.269    -17.96%    -19.34%
+2019-2020          729     59.01%     55.10%      26.04%     24.49%       0.900      0.819    -33.49%    -33.71%
+2021-2022          725     12.10%      6.78%       5.89%      3.34%       0.160      0.035    -22.95%    -24.49%
+2023-2024          728     50.17%     58.23%      22.64%     25.91%       1.285      1.515    -10.28%     -9.97%
+2025               362     14.58%     18.89%      14.77%     19.14%       0.599      0.766    -18.37%    -18.75%
+--------------------------------------------------------------------------------------------------------------
+
+Trades that occurred during each window (slices of the single trade log):
+Period             Total   Entries  PT fills  SL fills  Full close
+FULL 2015-2025       760       456       169       135           0
+2015-2016            641       456       100        85           0
+2017-2018             43         0        27        16           0
+2019-2020             76         0        42        34           0
+2021-2022              0         0         0         0           0
+2023-2024              0         0         0         0           0
+2025                   0         0         0         0           0
+==============================================================================================================
+
+Interpretation:
+  - Entries should appear ONLY in the 2015-2016 row (and the FULL row). If 'Entries' is
+    non-zero for any later period, the strategy re-entered — that would be a bug.
+  - Consistent Sharpe across periods -> strategy is regime-agnostic.
+  - One period dominating the full return -> result leans on that regime.
+  - This strategy has NO learned parameters (thresholds are spec-fixed),
+    so classical overfitting is impossible. Per-period slicing tests regime stability.

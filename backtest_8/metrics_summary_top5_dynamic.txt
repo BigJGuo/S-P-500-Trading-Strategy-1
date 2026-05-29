@@ -1,0 +1,26 @@
+========================================================================
+  Dynamic Top-5 (≥19% hysteresis) — 2015-01-02 -> 2025-12-31
+========================================================================
+  Candidate universe: AAPL, MSFT, GOOGL, AMZN, NVDA, META, TSLA, BRK-B, XOM, JPM, V, JNJ, WMT, UNH, PG
+  Swap rule: replace lowest holding with non-holding if mcap > 1.2x holding
+========================================================================
+Metric                                  Strategy                 SPY
+------------------------------------------------------------------------
+Total Return                             752.77%             302.61%
+CAGR                                      21.57%              13.53%
+Sharpe (rf=4.5%)                           0.751               0.550
+Sortino                                    1.004               0.673
+Max Drawdown                             -37.79%             -33.71%
+------------------------------------------------------------------------
+Total swaps                  : 9
+Trade-log rows               : 23
+Final holdings               : AAPL, AMZN, GOOGL, MSFT, NVDA
+Final cash residual          : $1,318.20
+
+Per-holding values at end (752.8% portfolio return):
+  AAPL    shares=    810  final_px=$  272.57  end_value=$    220,784.57
+  MSFT    shares=    504  final_px=$  485.32  end_value=$    244,600.64
+  GOOGL   shares=    756  final_px=$  313.63  end_value=$    237,103.71
+  AMZN    shares=    443  final_px=$  232.53  end_value=$    103,010.79
+  NVDA    shares=    210  final_px=$  187.53  end_value=$     39,381.27
+========================================================================

@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Data caches (regenerable, large)
+*.parquet
+
+# Run logs
+*_run.log
+*.log
